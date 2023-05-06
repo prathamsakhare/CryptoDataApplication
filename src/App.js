@@ -1,6 +1,6 @@
 import React from 'react';
 import {Header, Home, Coins, CoinDetails, Exchanges} from './components'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 function App() {
   return (
