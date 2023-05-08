@@ -20,7 +20,7 @@ const Coins = () => {
     setLoading(true);
   };
 
-  const btns = new Array(132).fill(1)
+  const btns = new Array(132).fill(1);
 
   useEffect(() => {
     const fetchCoins = async () => {
@@ -44,12 +44,11 @@ const Coins = () => {
         <Loader />
       ) : (
         <>
-        <RadioGroup value={currency} onChange={setCurrency} p={'8'}>
+          <RadioGroup value={currency} onChange={setCurrency} p={'8'}>
             <HStack>
-              <Radio value='inr'>INR</Radio>
-              <Radio value='usd'>USD</Radio>
-              <Radio value='eur'>EUR</Radio>
-            
+              <Radio value="inr">INR</Radio>
+              <Radio value="usd">USD</Radio>
+              <Radio value="eur">EUR</Radio>
             </HStack>
           </RadioGroup>
           <HStack wrap={'wrap'} justifyContent={'space-evenly'}>
@@ -66,20 +65,18 @@ const Coins = () => {
               />
             ))}
           </HStack>
-          
+
           <HStack width={'full'} overflowX={'auto'} p={'8'}>
-            {
-              btns.map((item, index) => (
-                <Button
+            {btns.map((item, index) => (
+              <Button
                 key={index}
-              bgColor={'blackAlpha.900'}
-              color={'white'}
-              onClick={() => changePage(index+1)}
-            >
-              {index+1}
-            </Button>
-              ))
-            }
+                bgColor={'blackAlpha.900'}
+                color={'white'}
+                onClick={() => changePage(index + 1)}
+              >
+                {index + 1}
+              </Button>
+            ))}
           </HStack>
         </>
       )}
